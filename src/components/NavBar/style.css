@@ -1,3 +1,6 @@
+.bg-black {
+    background-color: black !important;
+}
 .navbar {
     padding-top: var(--bs-navbar-padding-x);
 }

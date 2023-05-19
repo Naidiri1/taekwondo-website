@@ -8,7 +8,7 @@ import './style.css';
 const NavBar = () => {
 
   return (
-    <div>
+    <div className="bg-black" style={{background:"black"}}>
     <h1 className="mx-3">Hwa Rang Taekwon-Do</h1>
     <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
       <Container>
