@@ -4,7 +4,7 @@ import belt from "./belt.jpg";
 import { Card, CardImg, Button, Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import "./cardInformation"
-import SliderImg from './SliderImg';
+import SliderImg from '../SliderImg';
 const settings = {
   dots: true,
   infinite: true,
