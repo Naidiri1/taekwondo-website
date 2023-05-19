@@ -1,0 +1,49 @@
+.bg-black {
+    background-color: black !important;
+}
+.navbar {
+    padding-top: var(--bs-navbar-padding-x);
+}
+/* .brand {
+    font-size: 40px;
+} */
+.mx-3 {
+    margin-right: 1.05rem !important;
+    margin-left: 1.05rem !important;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.navbar > .container {
+    justify-content: end;
+}
+
+@media screen and (max-width: 796px) {
+    .text-size {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .bg-dark {
+        background-color: var(--bs-black) !important;
+    }
+    .navbar {
+        margin-left: .4rem !important;
+    }
+    .navbar > .container {
+        position: relative;
+        bottom: 40px;
+    }
+    .container > button {
+        z-index: 7;
+    }
+    h1 {
+        position: relative;
+        top: 5px;
+        z-index: 5;
+    }
+    
+}

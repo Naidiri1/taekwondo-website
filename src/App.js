@@ -1,11 +1,12 @@
 import React from "react";
-import Main from "./components/Main/Main";
+import Main from "./components/Main/";
+// import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
     <div>
+      {/* <NavBar/> */}
       <Main />
-
     </div>
   );
 };
