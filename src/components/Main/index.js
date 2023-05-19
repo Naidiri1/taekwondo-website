@@ -1,13 +1,14 @@
 import Slider from "react-slick";
 import "bootstrap/dist/css/bootstrap.css";
-import belt from "./belt.jpg";
-import { Card, CardImg, Button, Modal } from "react-bootstrap";
-import React, { useState } from "react";
-import "./cardInformation"
+import belt from "../../assets/imgs/belt.jpg";
+import React from "react";
 import SliderImg from '../SliderImg';
 import CardInformation from "../CardInformation";
 import Nav from "../Nav";
 import AboutTaekwondo from "../AboutTaekwondo";
+
+// Import sliderImgs array of objects from sliderImg.js
+import sliderImgs from "../../assets/json/sliderImgs";
 const settings = {
   dots: true,
   infinite: true,
@@ -16,35 +17,16 @@ const settings = {
   slidesToScroll: 1,
   objectFit: "cover",
   autoplay: true,
-  // autoplaySpeed: 2000,
+  autoplaySpeed: 2000,
 };
-const style = {
-  maxWidth: "100%",
-  margin: "0 auto",
-  textAlign: "center"
-}
+// const style = {
+//   maxWidth: "100%",
+//   margin: "0 auto",
+//   textAlign: "center"
+// }
 
 
 const Main = (props) => {
-
-  const sliderImgs = [
-    {
-      imgSrc: belt,
-      alt: "taekwondo belt",
-    },
-    {
-      imgSrc: belt,
-      alt: "taekwondo belt",
-    },
-    {
-      imgSrc: belt,
-      alt: "taekwondo belt",
-    },
-    {
-      imgSrc: belt,
-      alt: "taekwondo belt",
-    },
-  ];
 
   const cards = [
     {

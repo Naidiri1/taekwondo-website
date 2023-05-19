@@ -1,5 +1,5 @@
 import React from 'react';
-import belt from '../Main/belt.jpg';
+import belt from '../../assets/imgs/belt.jpg';
 
 const AboutTaekwondo = () => {
     return (
