@@ -32,16 +32,17 @@ const cardInformation = () => {
   ];
 
   const renderCards = () => {
-    return cards.map((card, idx) => (
+    return cards.map((card, index) => (
       <Main
-        key={idx}
+        key={index}
         img={card.img}
-        cardDescription={card.cardDescription}
         cardTitle={card.cardTitle}
+        cardDescription={card.cardDescription}
+        
       />
     ));
   };
-  return <div className="container">{renderCards()}</div>;
+  return (<div className="container">{renderCards()}</div>);
 };
 
 export default cardInformation;
