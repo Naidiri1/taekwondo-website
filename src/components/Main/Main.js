@@ -4,6 +4,7 @@ import belt from "./belt.jpg";
 import { Card, CardImg, Button, Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import "./cardInformation"
+import SliderImg from './SliderImg';
 const settings = {
   dots: true,
   infinite: true,
@@ -25,6 +26,26 @@ const Main = (props) => {
   const [show, setShow] = useState(false);
 const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
+
+const sliderImgs = [
+  {
+    imgSrc: belt,
+    alt: "taekwondo belt",
+  },
+  {
+    imgSrc: belt,
+    alt: "taekwondo belt",
+  },
+  {
+    imgSrc: belt,
+    alt: "taekwondo belt",
+  },
+  {
+    imgSrc: belt,
+    alt: "taekwondo belt",
+  },
+];
+
   return (
     <div>
       <div>
@@ -104,49 +125,7 @@ const handleShow = () => setShow(true);
       </div>
       <div style={{ maxWidth: "100%", margin: "0 auto", textAlign: "center" }}>
         <Slider {...settings}>
-          <div>
-            <img
-              src={props.srcImg}
-              alt={props.alt}
-              style={{ height: "300px", width: "100%", objectFit: "cover" }}
-            ></img>
-          </div>
-
-          <div>
-            <img
-              src={belt}
-              alt="logo"
-              style={{ height: "300px", width: "100%", objectFit: "cover" }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={belt}
-              alt="logo"
-              style={{ height: "300px", width: "100%", objectFit: "cover" }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={belt}
-              alt="logo"
-              style={{ height: "300px", width: "100%", objectFit: "cover" }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={belt}
-              alt="logo"
-              style={{ height: "300px", width: "100%", objectFit: "cover" }}
-            ></img>
-          </div>
-          <div>
-            <img
-              src={belt}
-              alt="logo"
-              style={{ height: "300px", width: "100%", objectFit: "cover" }}
-            ></img>
-          </div>
+          {sliderImgs.map((img, idx) => <SliderImg key={idx} srcImg={img.imgSrc} alt={img.alt}/>)}
         </Slider>
       </div>
       <div
