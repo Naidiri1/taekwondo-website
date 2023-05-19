@@ -1,0 +1,34 @@
+import React from 'react';
+import belt from '../Main/belt.jpg';
+
+const AboutTaekwondo = () => {
+    return (
+        <div style={{ position: "relative" }}>
+        <img
+          src={belt}
+          alt="logo"
+          style={{
+            height: "400px",
+            width: "100%",
+            objectFit: "cover",
+            filter: "contrast(60%)",
+          }}
+        />
+        <div
+          className="position-absolute top-50 start-50 translate-middle text-center "
+          style={{ background: "none" }}
+        >
+          <h3 style={{ background: "none" }}>ABOUT OUR MARTIAL ART</h3>
+          <h3 style={{ background: "none" }}>ARTS SCHOOL</h3>
+          <p style={{ background: "none" }}>
+            What is Taekwondo original meaning? Taekwondo (also known as Tae
+            Kwon Do) is the art of self defense that originated in Korea. It is
+            recognized as one of the oldest forms of martial arts in the world,
+            reaching back over 2,000 years.
+          </p>
+        </div>
+      </div>
+    );
+};
+
+export default AboutTaekwondo;
