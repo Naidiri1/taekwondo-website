@@ -4,7 +4,7 @@ import belt from "../../assets/imgs/belt.jpg";
 import React from "react";
 import SliderImg from '../SliderImg';
 import CardInformation from "../CardInformation";
-import Nav from "../Nav";
+import NavBar from "../NavBar";
 import AboutTaekwondo from "../AboutTaekwondo";
 
 // Import sliderImgs array of objects from sliderImg.js
@@ -58,7 +58,8 @@ const Main = (props) => {
 
   return (
     <div>
-      <Nav/>
+      <NavBar />
+    <div>
       <div className="d-flex justify-content-center align-items-center">
         <img
           src={belt}
@@ -96,6 +97,7 @@ const Main = (props) => {
       <div id="classes" style={{ width: "100%", maxWidth: "600px", textAlign: "center", alignContent: "center", margin: "20px" }}>
           {cards.map((card,idx) => <CardInformation key={idx} img={card.img} cardTitle={card.cardTitle} cardDescription={card.cardDescription}/>)}
       </div>
+    </div>
     </div>
   );
 };
