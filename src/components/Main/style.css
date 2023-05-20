@@ -1,0 +1,7 @@
+.text--overlay {
+    transform: translate(0, -400%);
+  }
+
+.text--overlay h1 {
+    color: rgba(255, 255, 255, 0.566);
+}

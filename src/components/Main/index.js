@@ -10,6 +10,7 @@ import "./style.css";
 
 // Import sliderImgs array of objects from sliderImg.js
 import sliderImgs from "../../assets/json/sliderImgs";
+
 const settings = {
   dots: true,
   infinite: true,
@@ -23,7 +24,7 @@ const settings = {
 const style = {
   maxWidth: "100%",
   margin: "0 auto",
-  textAlign: "center",
+  textAlign: "center"
 };
 const bgGray = {
   backgroundColor: "#212529",
@@ -97,7 +98,7 @@ const Main = () => {
             </div>
           </div>
           <AboutTaekwondo />
-          <div style={style}>
+          <div style={style} >
             <Slider {...settings}>
        
               {sliderImgs.map((img, idx) => (
@@ -105,7 +106,7 @@ const Main = () => {
                   key={idx}
                   srcImg={img.imgSrc}
                   alt={img.alt}
-                  caption="holafdfdfdfddddfdfdfdf"
+                  caption={img.caption}
                 />
               ))}
             </Slider>
