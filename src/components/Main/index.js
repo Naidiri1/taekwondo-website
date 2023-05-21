@@ -39,22 +39,27 @@ const Main = () => {
     },
     {
       img: belt,
-      cardTitle: "class 1",
+      cardTitle: "class 2",
       cardDescription: "class starts at 8 am",
     },
     {
       img: belt,
-      cardTitle: "class 1",
+      cardTitle: "class 3",
       cardDescription: "class starts at 8 am",
     },
     {
       img: belt,
-      cardTitle: "class 1",
+      cardTitle: "class 4",
       cardDescription: "class starts at 8 am",
     },
     {
       img: belt,
-      cardTitle: "class 1",
+      cardTitle: "class 5",
+      cardDescription: "class starts at 8 am",
+    },
+    {
+      img: belt,
+      cardTitle: "class 6",
       cardDescription: "class starts at 8 am",
     },
   ];
@@ -111,15 +116,7 @@ const Main = () => {
               ))}
             </Slider>
           </div>
-          <div
-            style={{
-              width: "100%",
-              maxWidth: "600px",
-              textAlign: "center",
-              alignContent: "center",
-              margin: "20px",
-            }}
-          >
+          <div className="card--container">
             {cards.map((card, idx) => (
               <CardInformation
                 key={idx}
