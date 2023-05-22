@@ -10,6 +10,7 @@ import "./style.css";
 
 // Import sliderImgs array of objects from sliderImg.js
 import sliderImgs from "../../assets/json/sliderImgs";
+
 const settings = {
   dots: true,
   infinite: true,
@@ -23,7 +24,7 @@ const settings = {
 const style = {
   maxWidth: "100%",
   margin: "0 auto",
-  textAlign: "center",
+  textAlign: "center"
 };
 const bgGray = {
   backgroundColor: "#212529",
@@ -38,22 +39,27 @@ const Main = () => {
     },
     {
       img: belt,
-      cardTitle: "class 1",
+      cardTitle: "class 2",
       cardDescription: "class starts at 8 am",
     },
     {
       img: belt,
-      cardTitle: "class 1",
+      cardTitle: "class 3",
       cardDescription: "class starts at 8 am",
     },
     {
       img: belt,
-      cardTitle: "class 1",
+      cardTitle: "class 4",
       cardDescription: "class starts at 8 am",
     },
     {
       img: belt,
-      cardTitle: "class 1",
+      cardTitle: "class 5",
+      cardDescription: "class starts at 8 am",
+    },
+    {
+      img: belt,
+      cardTitle: "class 6",
       cardDescription: "class starts at 8 am",
     },
   ];
@@ -97,7 +103,7 @@ const Main = () => {
             </div>
           </div>
           <AboutTaekwondo />
-          <div style={style}>
+          <div style={style} >
             <Slider {...settings}>
        
               {sliderImgs.map((img, idx) => (
@@ -105,20 +111,12 @@ const Main = () => {
                   key={idx}
                   srcImg={img.imgSrc}
                   alt={img.alt}
-                  caption="holafdfdfdfddddfdfdfdf"
+                  caption={img.caption}
                 />
               ))}
             </Slider>
           </div>
-          <div
-            style={{
-              width: "100%",
-              maxWidth: "600px",
-              textAlign: "center",
-              alignContent: "center",
-              margin: "20px",
-            }}
-          >
+          <div className="card--container">
             {cards.map((card, idx) => (
               <CardInformation
                 key={idx}

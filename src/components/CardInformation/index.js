@@ -21,7 +21,7 @@ const CardInformation = (props) => {
         <Card.Title>{props.cardTitle}</Card.Title>
         <Card.Body>
           <Card.Text style={{ margin: "10px", textAlign: "justify" }}>
-            {props.cardDescription}
+            <div className="card--description">{props.cardDescription}</div>
           </Card.Text>
         </Card.Body>
       </div>

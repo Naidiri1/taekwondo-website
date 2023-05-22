@@ -8,6 +8,9 @@ const SliderImg = (props) => {
                 alt={props.alt}
                 style={{ height: "300px", width: "100%", objectFit: "cover" }}
             ></img>
+            <div className="text--overlay">
+                <h1>{props.caption}</h1>
+            </div>
         </div>
     )
 };
