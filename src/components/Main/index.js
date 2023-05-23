@@ -7,6 +7,7 @@ import CardInformation from "../CardInformation";
 import NavBar from "../NavBar";
 import AboutTaekwondo from "../AboutTaekwondo";
 import "./style.css";
+import cards from "./cards";
 
 // Import sliderImgs array of objects from sliderImg.js
 import sliderImgs from "../../assets/json/sliderImgs";
@@ -24,46 +25,13 @@ const settings = {
 const style = {
   maxWidth: "100%",
   margin: "0 auto",
-  textAlign: "center"
+  textAlign: "center",
 };
 const bgGray = {
   backgroundColor: "#212529",
 };
 
 const Main = () => {
-  const cards = [
-    {
-      img: belt,
-      cardTitle: "class 1",
-      cardDescription: "class starts at 8 am",
-    },
-    {
-      img: belt,
-      cardTitle: "class 2",
-      cardDescription: "class starts at 8 am",
-    },
-    {
-      img: belt,
-      cardTitle: "class 3",
-      cardDescription: "class starts at 8 am",
-    },
-    {
-      img: belt,
-      cardTitle: "class 4",
-      cardDescription: "class starts at 8 am",
-    },
-    {
-      img: belt,
-      cardTitle: "class 5",
-      cardDescription: "class starts at 8 am",
-    },
-    {
-      img: belt,
-      cardTitle: "class 6",
-      cardDescription: "class starts at 8 am",
-    },
-  ];
-
   return (
     <div>
       <div>
@@ -91,11 +59,14 @@ const Main = () => {
               <h2>TAEKWON-DO</h2>
               <p> Learn Something New Today</p>
               <p>
-                Taekwondo, Tae Kwon Do or Taekwon-Do (/ˌtaɪkwɒnˈdoʊ,
+                Taekwondo, Tae Kwon Do or Taekwon-Do /ˌtaɪkwɒnˈdoʊ,
                 ˌtaɪˈkwɒndoʊ,
               </p>
-              ˌtɛkwənˈdoʊ/;[3][4][5] Korean: 태권도/跆拳道 [t̪ʰɛ.k͈wʌ̹n.d̪o]
-              (listen))
+            
+              <p>
+                is a Korean martial arts involving punching and kicking
+                techniques,
+              </p>
               <p>
                 is a Korean martial arts involving punching and kicking
                 techniques,
@@ -103,9 +74,8 @@ const Main = () => {
             </div>
           </div>
           <AboutTaekwondo />
-          <div style={style} >
+          <div style={style}>
             <Slider {...settings}>
-       
               {sliderImgs.map((img, idx) => (
                 <SliderImg
                   key={idx}
@@ -123,6 +93,9 @@ const Main = () => {
                 img={card.img}
                 cardTitle={card.cardTitle}
                 cardDescription={card.cardDescription}
+                modalTitle={card.modalTitle}
+                modalContent={card.modalContent}
+                modalImgApp={card.modalImgApp}
               />
             ))}
           </div>
