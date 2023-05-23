@@ -26,7 +26,7 @@ font-size: large;
     }
 }
 
-/* @media screen and (max-width: 576px) {
+ /* @media screen and (max-width: 576px) {
   
     .navbar {
         margin-left: .4rem !important;
@@ -44,11 +44,11 @@ font-size: large;
         z-index: 5;
     }
     
-} */
-/* @media screen and (max-width: 576px) {
+} 
+ @media screen and (max-width: 576px) {
 .container{
     background-color: black;
     border: none;
 }
 
-} */
+}  */

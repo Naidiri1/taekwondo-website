@@ -8,9 +8,10 @@ import NavBar from "../NavBar";
 import AboutTaekwondo from "../AboutTaekwondo";
 import "./style.css";
 import cards from "./cards";
-
 // Import sliderImgs array of objects from sliderImg.js
 import sliderImgs from "../../assets/json/sliderImgs";
+// import AlbumTemplate from "../Album/albumTemplate";
+import Album from "../Album/Album";
 
 const settings = {
   dots: true,
@@ -21,16 +22,15 @@ const settings = {
   objectFit: "cover",
   autoplay: true,
   autoplaySpeed: 2000,
+  overflow: "hidden",
 };
 const style = {
-  maxWidth: "100%",
-  margin: "0 auto",
+  overflow: "hidden",
   textAlign: "center",
 };
 const bgGray = {
   backgroundColor: "#212529",
 };
-
 const Main = () => {
   return (
     <div>
@@ -39,19 +39,13 @@ const Main = () => {
       </div>
       <div style={bgGray}>
         <div>
-          <div className="d-flex justify-content-center align-items-center">
-            <img
-              src={belt}
-              alt="logo"
-              className="img-fluid"
-              style={{
-                maxHeight: "500px",
-                marginTop: "100px",
-                justifyContent: "center",
-                alignContent: "center",
-                objectFit: "cover",
-              }}
-            />
+          <div className="pt-5 d-flex align-items-center justify-content-center">
+            <button className="button ">
+              <span> GET A FREE CLASS </span>
+            </button>
+          </div>
+          <div className=" d-flex justify-content-center align-items-center">
+            <img className=" img-fluid main-img" src={belt} alt="logo" />
           </div>
           <div className="d-flex justify-content-center align-items-center text-center">
             <div>
@@ -62,7 +56,6 @@ const Main = () => {
                 Taekwondo, Tae Kwon Do or Taekwon-Do /ˌtaɪkwɒnˈdoʊ,
                 ˌtaɪˈkwɒndoʊ,
               </p>
-            
               <p>
                 is a Korean martial arts involving punching and kicking
                 techniques,
@@ -81,7 +74,7 @@ const Main = () => {
                   key={idx}
                   srcImg={img.imgSrc}
                   alt={img.alt}
-                  caption={img.caption}
+                  caption="same text imgs"
                 />
               ))}
             </Slider>
@@ -99,8 +92,11 @@ const Main = () => {
               />
             ))}
           </div>
+          <div className="album-imgs" >
+         {Album()}
         </div>
       </div>
+    </div>
     </div>
   );
 };
