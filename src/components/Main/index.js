@@ -12,6 +12,7 @@ import cards from "./cards";
 import sliderImgs from "../../assets/json/sliderImgs";
 // import AlbumTemplate from "../Album/albumTemplate";
 import Album from "../Album/Album";
+import logo from "../../assets/imgs/croppedLogo.png"
 
 const settings = {
   dots: true,
@@ -38,6 +39,9 @@ const Main = () => {
         <NavBar />
       </div>
       <div style={bgGray}>
+        <div className="logo">
+          <img className="logo--img" src={logo} alt="logo"/>
+        </div>
         <div>
           <div className="pt-5 d-flex align-items-center justify-content-center">
             <button className="button ">
