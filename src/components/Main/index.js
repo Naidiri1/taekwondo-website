@@ -12,7 +12,8 @@ import cards from "./cards";
 import sliderImgs from "../../assets/json/sliderImgs";
 // import AlbumTemplate from "../Album/albumTemplate";
 import Album from "../Album/Album";
-import logo from "../../assets/imgs/croppedLogo.png"
+import logo from "../../assets/imgs/croppedLogo.png";
+import Form from "../Form/Form";
 
 const settings = {
   dots: true,
@@ -40,7 +41,7 @@ const Main = () => {
       </div>
       <div style={bgGray}>
         <div className="logo">
-          <img className="logo--img" src={logo} alt="logo"/>
+          <img className="logo--img" src={logo} alt="logo" />
         </div>
         <div>
           <div className="pt-5 d-flex align-items-center justify-content-center">
@@ -96,11 +97,21 @@ const Main = () => {
               />
             ))}
           </div>
-          <div className="album-imgs" >
-         {Album()}
+          <div className="album-imgs">{Album()}</div>
+          <div
+            className=" text-center contact"
+            style={{ marginTop: "35px", paddingBottom: "35px" }}
+          >
+            <h1>Contact Information </h1>
+            <p> Location: 4520FL-64, Bradenton, FL 34208</p>
+            <p>Phone: 941-202-2306</p>
+            <p>Email: taekwondobradenton@gmail.com </p>
+          </div>
+          <div style={{justifyContent:"center", alignItems:"center", justifyItems:"center"}}>
+          <Form />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
