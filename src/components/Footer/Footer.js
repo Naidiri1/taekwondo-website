@@ -16,7 +16,7 @@ const style = {
   color: "white",
 };
 const bgBlack = {
-  backgroundColor: "black",
+  backgroundColor: "black"
 };
 
 const margingLeft = {
