@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
-import belt from "../../assets/imgs/belt.jpg";
+import imgOne from "../../assets/imgs/imgOne.jpg"
+import imgTwo from "../../assets/imgs/imgTwo.jpg"
+import imgThree from "../../assets/imgs/imgThree.jpg"
+import imgFour from "../../assets/imgs/imgFour.jpg"
+import imgFive from "../../assets/imgs/imgFive.jpg"
+import imgSix from "../../assets/imgs/imgSix.jpg"
+
 const Album = () => {
   const [displayedImages, setDisplayedImages] = useState(3); // Initial number of displayed images
   const album = [
-    { imgSrc: belt, alt: 'Image 1' },
-    { imgSrc: belt, alt: 'Image 1' },
-    { imgSrc: belt, alt: 'Image 1' },
-    { imgSrc: belt, alt: 'Image 1' },
-    { imgSrc: belt, alt: 'Image 1' },
-    { imgSrc: belt, alt: 'Image 1' },
+    { imgSrc: imgOne, alt: 'Image 1' },
+    { imgSrc: imgTwo, alt: 'Image 1' },
+    { imgSrc: imgThree, alt: 'Image 1' },
+    { imgSrc: imgFour, alt: 'Image 1' },
+    { imgSrc: imgFive, alt: 'Image 1' },
+    { imgSrc: imgSix, alt: 'Image 1' },
   
     // Add more images here
   ];
@@ -43,7 +49,7 @@ const Album = () => {
 const AlbumTemplate = ({ img, alt }) => {
   return (
     <div className="mt-5  d-flex flex-wrap justify-content-center align-items-center" >
-  <img src={img} alt={alt} style={{height:"300px", width:"300px", padding:"10px"}}/>
+  <img src={img} alt={alt} style={{height:"300px", width:"300px", padding:"10px", objectFit:"fill"}}/>
   </div>
   );
 };
