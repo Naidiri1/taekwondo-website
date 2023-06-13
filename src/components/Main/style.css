@@ -79,13 +79,13 @@
 .logo {
   display: flex;
   justify-content: center;
-
 }
 
 .logo--img {
   width: 400px;
   background-size: cover;
   animation: spin 8s linear infinite;
+  transform-style: preserve-3d;
   transition: 1s;
 }
 
@@ -107,3 +107,4 @@ will-change: 100%;
 margin-left: 20%;
 
 }
+

@@ -12,6 +12,8 @@ import cards from "./cards";
 import sliderImgs from "../../assets/json/sliderImgs";
 // import AlbumTemplate from "../Album/albumTemplate";
 import Album from "../Album/Album";
+import Maps from "../Google/Maps"
+import Reviews from "../Google/Reviews"
 import logo from "../../assets/imgs/croppedLogo.png";
 import Form from "../Form/Form";
 
