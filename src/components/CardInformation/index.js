@@ -16,7 +16,7 @@ const CardInformation = (props) => {
           alignItems: "center",
         }}
       >
-        <CardImg src={props.img} style={{ height: "300px" }} />
+        <CardImg src={props.img} style={{ height: "300px", objectFit:"cover" }} />
         <Card.Title>{props.cardTitle}</Card.Title>
         <Card.Body>
           <Card.Text style={{ margin: "10px", textAlign: "justify" }}>

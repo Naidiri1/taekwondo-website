@@ -45,9 +45,10 @@ const Main = () => {
         </div>
         <div>
           <div className="pt-5 d-flex align-items-center justify-content-center">
-            <button className="button ">
+            <a href="#class"><button className="button ">
               <span> GET A FREE CLASS </span>
             </button>
+            </a>
           </div>
           <div className=" d-flex justify-content-center align-items-center">
             <img className=" img-fluid main-img" src={belt} alt="logo" />
@@ -57,10 +58,7 @@ const Main = () => {
               <h2>HWA RANG TRADITIONAL</h2>
               <h2>TAEKWON-DO</h2>
               <p> Learn Something New Today</p>
-              <p>
-                Taekwondo, Tae Kwon Do or Taekwon-Do /ˌtaɪkwɒnˈdoʊ,
-                ˌtaɪˈkwɒndoʊ,
-              </p>
+              <p>Taekwondo, Tae Kwon Do or Taekwon-Do /</p>
               <p>
                 is a Korean martial arts involving punching and kicking
                 techniques,
@@ -84,7 +82,7 @@ const Main = () => {
               ))}
             </Slider>
           </div>
-          <div className="card--container">
+          <div id ="courses" className="card--container">
             {cards.map((card, idx) => (
               <CardInformation
                 key={idx}
@@ -97,18 +95,31 @@ const Main = () => {
               />
             ))}
           </div>
-          <div className="album-imgs">{Album()}</div>
+          <div id="album" className="album-imgs">{Album()}</div>
           <div
-            className=" text-center contact"
-            style={{ marginTop: "35px", paddingBottom: "35px" }}
+            id="contact"
+            className="d-flex justify-content-center contact-inf"
           >
-            <h1>Contact Information </h1>
-            <p> Location: 4520FL-64, Bradenton, FL 34208</p>
-            <p>Phone: 941-202-2306</p>
-            <p>Email: taekwondobradenton@gmail.com </p>
-          </div>
-          <div style={{justifyContent:"center", alignItems:"center", justifyItems:"center"}}>
-          <Form />
+            <div id="class"
+              style={{
+                display: "inline-block",
+                paddingBottom: "80px",
+                marginLeft: "390px",
+              }}
+            >
+              <h1 style={{}}>Contact Information </h1>
+              <p> Location: 4520FL-64, Bradenton, FL 34208</p>
+              <p>Phone: 941-202-2306</p>
+              <p>Email: taekwondobradenton@gmail.com </p>
+            </div>
+            <div
+              className="contact-inf"
+              style={{
+                display: "inline-block",
+              }}
+            >
+              <Form />
+            </div>
           </div>
         </div>
       </div>
