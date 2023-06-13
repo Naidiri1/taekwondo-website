@@ -123,6 +123,8 @@ const Main = () => {
               <Form />
             </div>
           </div>
+          <Maps/>
+          <Reviews/>
         </div>
       </div>
     </div>

@@ -5,7 +5,6 @@ import * as yup from "yup";
 import emailjs from '@emailjs/browser';
 import "./style.css";
 import { serviceEmail, templateID, publicKey } from './config';
-
 // const serviceEmail = process.env.serviceEmail;
 // const templateID = process.env.templateID;
 // const publicKey = process.env.publicKey;
