@@ -2,6 +2,7 @@
   "name": "taekwondo-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Naidiri1.github.io/taekwondo-website",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -24,9 +25,12 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "web-vitals": "^2.1.4",
-    "yup": "^1.2.0"
+    "yup": "^1.2.0",
+    "gh-pages": "^5.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
