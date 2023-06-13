@@ -9,6 +9,7 @@ const CardInformation = (props) => {
     <div className="mt-5 d-flex flex-wrap justify-content-center align-items-center">
       <div
         style={{
+          minWidth: "400px",
           width: "100%",
           maxWidth: "500px",
           textAlign: "center",

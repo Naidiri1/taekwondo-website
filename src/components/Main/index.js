@@ -98,33 +98,21 @@ const Main = () => {
             ))}
           </div>
           <div id="album" className="album-imgs">{Album()}</div>
-          <div
-            id="contact"
-            className="d-flex justify-content-center contact-inf"
-          >
-            <div id="class"
-              style={{
-                display: "inline-block",
-                paddingBottom: "80px",
-                marginLeft: "390px",
-              }}
-            >
-              <h1 style={{}}>Contact Information </h1>
-              <p> Location: 4520FL-64, Bradenton, FL 34208</p>
+            <div className="maps--container">
+              <h1>Location</h1>
+              <Maps />
+            </div>
+            <div className="form--container" id="contact">
+            <Form/>
+              <div className="contact--information--container">
+              <h1>Contact Information </h1>
               <p>Phone: 941-202-2306</p>
               <p>Email: taekwondobradenton@gmail.com </p>
+              <p> Location: 4520FL-64, Bradenton, FL 34208</p>
             </div>
-            <div
-              className="contact-inf"
-              style={{
-                display: "inline-block",
-              }}
-            >
-              <Form />
             </div>
-          </div>
-          <Maps/>
-          <Reviews/>
+           <div id="testimonials"> </div>
+          <Reviews />
         </div>
       </div>
     </div>

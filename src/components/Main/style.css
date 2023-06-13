@@ -7,12 +7,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .card--description {
   text-align: center;
 }
+
 .button {
   transition-duration: 0.4s;
   box-shadow: 0 8px 16px 0 rgba(33, 75, 45, 0.2),
@@ -97,14 +97,49 @@
     transform: rotateY(360deg);
   }
 }
-.contact-inf{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-max-width: 100%;
-will-change: 100%;
-margin-left: 20%;
 
+.maps--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.google--map {
+  max-width: 1280px;
+  width: 100%;
+  min-width: 360px;
+  height: 100%;
+  min-height: 600px;
+}
+
+.form--container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.contact--information--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+
+.contact--information--container h1{
+  font-size: 60px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .contact--information--container {
+    font-size: 15px;
+  }
+  .contact--information--container h1 {
+    font-size: 25px;
+  }
+
+}
