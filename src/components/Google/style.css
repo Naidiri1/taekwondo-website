@@ -1,0 +1,18 @@
+.google--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.map {
+    width: 40rem;
+    min-width: 300px;
+    height: 25rem;
+    min-height: 20rem;
+}
+
+.map span {
+    color: blue;
+}

@@ -1,15 +1,15 @@
 import React from 'react'
-import Form from './form'
 import Maps from './Maps'
 import Reviews from './Reviews'
 
-const Contact = () => {
+
+const Google = () => {
   return (
-    <div className='contact--container'>
+    <div className='google--container'>
     <Maps />
-    <Form />
+    <Reviews />
     </div>
   )
 }
 
-export default Contact
+export default Google

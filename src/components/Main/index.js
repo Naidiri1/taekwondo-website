@@ -13,7 +13,7 @@ import sliderImgs from "../../assets/json/sliderImgs";
 // import AlbumTemplate from "../Album/albumTemplate";
 import Album from "../Album/Album";
 import logo from "../../assets/imgs/croppedLogo.png"
-import Contact from "../Contact"
+import Google from "../Google"
 
 const settings = {
   dots: true,
@@ -100,7 +100,7 @@ const Main = () => {
           <div className="album-imgs" >
          {Album()}
         </div>
-        <Contact />
+        <Google />
       </div>
     </div>
     </div>
