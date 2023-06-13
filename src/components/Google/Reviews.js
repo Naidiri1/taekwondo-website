@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { ElfsightWidget } from 'react-elfsight-widget';
 
 const Reviews = () => {
@@ -11,8 +11,8 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div>
-      <h1 style={{marginTop: "5rem"}}>Reviews</h1>
+    <div className='reviews--container'>
+      <h1 style={{textAlign: "center"}}>Reviews</h1>
       <ElfsightWidget  class="elfsight-app-9fd2d85c-3648-4136-809e-1d68535f49ae" />
     </div>
   )

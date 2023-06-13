@@ -13,7 +13,8 @@ import sliderImgs from "../../assets/json/sliderImgs";
 // import AlbumTemplate from "../Album/albumTemplate";
 import Album from "../Album/Album";
 import logo from "../../assets/imgs/croppedLogo.png"
-import Google from "../Google"
+import Maps from "../Google/Maps"
+import Reviews from "../Google/Reviews"
 
 const settings = {
   dots: true,
