@@ -7,6 +7,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .card--description {
@@ -95,4 +96,14 @@
   100% {
     transform: rotateY(360deg);
   }
+}
+.contact-inf{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 100%;
+will-change: 100%;
+margin-left: 20%;
+
 }
