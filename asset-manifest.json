@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/taekwondo-website/static/css/main.d4694ee8.css",
+    "main.js": "/taekwondo-website/static/js/main.3f596832.js",
+    "static/js/787.a54a93eb.chunk.js": "/taekwondo-website/static/js/787.a54a93eb.chunk.js",
+    "static/media/belt.jpg": "/taekwondo-website/static/media/belt.1a1ad3b00fed98f310f0.jpg",
+    "static/media/imgOne.jpg": "/taekwondo-website/static/media/imgOne.8f0b0c7e0602fbd2e07d.jpg",
+    "static/media/advanced.jpg": "/taekwondo-website/static/media/advanced.7af22695093eeeb3458c.jpg",
+    "static/media/croppedLogo.png": "/taekwondo-website/static/media/croppedLogo.73d2aab92315647d70b2.png",
+    "static/media/imgFour.jpg": "/taekwondo-website/static/media/imgFour.417bb60b3cd6fc49a903.jpg",
+    "static/media/imgThree.jpg": "/taekwondo-website/static/media/imgThree.2de2452b5d67405e7c8e.jpg",
+    "static/media/camps.jpg": "/taekwondo-website/static/media/camps.61590f0e6ad6d6ffaf85.jpg",
+    "static/media/imgSix.jpg": "/taekwondo-website/static/media/imgSix.4f2cace5b5a11f505afd.jpg",
+    "static/media/beginner.jpg": "/taekwondo-website/static/media/beginner.4a04aa2427f043d6287d.jpg",
+    "static/media/afterSchool.jpg": "/taekwondo-website/static/media/afterSchool.52ddf2ad9448dec3b8ea.jpg",
+    "static/media/kids.jpg": "/taekwondo-website/static/media/kids.3175dd36aba63f67136e.jpg",
+    "static/media/imgFive.jpg": "/taekwondo-website/static/media/imgFive.3761d0a27070c6f4fe46.jpg",
+    "static/media/imgTwo.jpg": "/taekwondo-website/static/media/imgTwo.a3ea6cb224aec6ed4e48.jpg",
+    "index.html": "/taekwondo-website/index.html",
+    "main.d4694ee8.css.map": "/taekwondo-website/static/css/main.d4694ee8.css.map",
+    "main.3f596832.js.map": "/taekwondo-website/static/js/main.3f596832.js.map",
+    "787.a54a93eb.chunk.js.map": "/taekwondo-website/static/js/787.a54a93eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4694ee8.css",
+    "static/js/main.3f596832.js"
+  ]
+}
