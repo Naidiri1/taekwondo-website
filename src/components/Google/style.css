@@ -1,8 +1,10 @@
 .google--container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-top: 2rem;
 }
 
@@ -13,6 +15,3 @@
     min-height: 20rem;
 }
 
-.map span {
-    color: blue;
-}

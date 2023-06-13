@@ -100,7 +100,6 @@ const Main = () => {
           <div className="album-imgs" >
          {Album()}
         </div>
-        <Google />
       </div>
     </div>
     </div>
