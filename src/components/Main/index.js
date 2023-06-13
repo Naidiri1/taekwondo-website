@@ -102,7 +102,7 @@ const Main = () => {
               <h1>Location</h1>
               <Maps />
             </div>
-            <div className="form--container">
+            <div className="form--container" id="contact">
             <Form/>
               <div className="contact--information--container">
               <h1>Contact Information </h1>
@@ -111,6 +111,7 @@ const Main = () => {
               <p> Location: 4520FL-64, Bradenton, FL 34208</p>
             </div>
             </div>
+           <div id="testimonials"> </div>
           <Reviews />
         </div>
       </div>
