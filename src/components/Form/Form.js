@@ -5,16 +5,6 @@ import * as yup from "yup";
 import emailjs from '@emailjs/browser';
 import "./style.css";
 import { serviceEmail, templateID, publicKey } from './config';
-// const serviceEmail = process.env.serviceEmail;
-// const templateID = process.env.templateID;
-// const publicKey = process.env.publicKey;
-
-// console.log('API Key:', serviceEmail);
-
-// console.log('template:', templateID);
-
-// console.log('publickey:', publicKey);
-
 const schema = yup.object().shape({
   firstName: yup.string().required('First name is required'),
   lastName: yup.string().required('Last name is required'),
@@ -23,32 +13,31 @@ const schema = yup.object().shape({
     .number()
     .typeError('Please enter a valid phone number')
     .required('Phone number is required'),
-  email: yup.string().email('Invalid email'),
-  message: yup.string(),
+  email: yup.string().email('Invalid email').required("Email is required"),
+  message: yup.string().required("Message is required"),
 });
 
  function Form() {
   const form = useRef();
 
-  const { register, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(serviceEmail, templateID, form.current, publicKey)
+  const sendEmail = () => {
+   
+      emailjs.sendForm(serviceEmail, templateID, form.current, publicKey)
     .then((result) => {
         console.log(result.text);
     }, (error) => {
         console.log(error.text);
     });
-
+    reset();
   };
   return (
     <div className="form">
       <h1>Contact Us</h1>
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={handleSubmit(sendEmail)}>
         <input type="text" name="firstName" placeholder="First name" {...register("firstName")} />
         {errors.firstName && <p>{errors.firstName.message}</p>}
         <input type="text" name="lastName" placeholder="Last name" {...register("lastName")} />
