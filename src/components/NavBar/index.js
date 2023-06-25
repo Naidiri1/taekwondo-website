@@ -9,7 +9,7 @@ import "./style.css";
 
 const NavBar = () => {
   return (
-    <div style={{ background: "black" }}>
+    <div style={{ background: "black" }} className="nav--container">
       <div>
         <h1 className="mx-3">Hwa Rang Taekwon-Do</h1>
         <a
@@ -33,7 +33,7 @@ const NavBar = () => {
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#team">Team</Nav.Link>
-              <Nav.Link href="#courses">Courses</Nav.Link>
+              <Nav.Link href="#courses">Classes</Nav.Link>
               <Nav.Link href="#album">Album</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
               <Nav.Link href="#testimonials">Testimonials</Nav.Link>

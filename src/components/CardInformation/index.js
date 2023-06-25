@@ -1,33 +1,49 @@
 import React, { useState } from "react";
 import { Card, CardImg, Button, Modal } from "react-bootstrap";
-
+import "./style.css"
 const CardInformation = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="mt-5 d-flex flex-wrap justify-content-center align-items-center">
+    <div style={{
+      display: "flex",
+      flexDirection: "row",
+      flexWrap: "wrap",
+    }}>
       <div
         style={{
-          minWidth: "400px",
+          display: "flex",
+          flexDirection: "column",
+          padding: "25px",
+          margin: "40px",
+          minWidth: "300px",
           width: "100%",
-          maxWidth: "500px",
+          maxWidth: "400px",
+          minHeight: "550px",
           textAlign: "center",
-          alignContent: "center",
-          alignItems: "center",
+          border: "1px solid rgb(171, 171, 171)"
         }}
       >
-        <CardImg src={props.img} style={{ height: "300px", objectFit:"cover" }} />
-        <Card.Title>{props.cardTitle}</Card.Title>
+        <CardImg src={props.img} style={{ 
+          minWidth: "300px", 
+          width: "100%", 
+          maxWidth: "400px",
+          minHeight: "400",
+          height: "100%",
+          maxHeight: "600px"}} 
+        />
+        <Card.Title style={{margin: "20px"}}>{props.cardTitle}</Card.Title>
+        <div style={{borderBottom: "1px solid white"}}></div>
         <Card.Body>
           <Card.Text style={{ margin: "10px", textAlign: "justify" }}>
             <div className="card--description">{props.cardDescription}</div>
           </Card.Text>
         </Card.Body>
-      </div>
-      <Button className="me-2 mb-2" onClick={() => handleShow()}>
+        <Button className="class--button" onClick={() => handleShow()}>
         More about this class
       </Button>
+      </div>
       <div className="modal">
         <Modal
           show={show}

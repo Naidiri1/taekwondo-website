@@ -17,6 +17,7 @@ import Reviews from "../Google/Reviews"
 import logo from "../../assets/imgs/croppedLogo.png";
 import Form from "../Form/Form";
 
+
 const settings = {
   dots: true,
   infinite: true,
@@ -36,24 +37,17 @@ const bgGray = {
   backgroundColor: "#212529",
 };
 const Main = () => {
+
+
   return (
     <div>
       <div>
         <NavBar />
       </div>
       <div style={bgGray}>
-        <div className="logo">
-          <img className="logo--img" src={logo} alt="logo" />
-        </div>
         <div>
-          <div className="pt-5 d-flex align-items-center justify-content-center">
-            <a href="#class"><button className="button ">
-              <span> GET A FREE CLASS </span>
-            </button>
-            </a>
-          </div>
           <div className=" d-flex justify-content-center align-items-center">
-            <img className=" img-fluid main-img" src={belt} alt="logo" />
+            <img style={{marginTop: "10rem"}} className=" img-fluid main-img" src={belt} alt="logo" />
           </div>
           <div className="d-flex justify-content-center align-items-center text-center">
             <div>
@@ -106,13 +100,15 @@ const Main = () => {
             <Form/>
               <div className="contact--information--container">
               <h1>Contact Information </h1>
-              <p>Phone: 941-202-2306</p>
-              <p>Email: taekwondobradenton@gmail.com </p>
-              <p> Location: 4520FL-64, Bradenton, FL 34208</p>
-            </div>
+              <p>(941)-202-2306</p>
+              <p>taekwondobradenton@gmail.com </p>
+              <p>4520FL-64, Bradenton, FL 34208</p>
+              </div>
             </div>
            <div id="testimonials"> </div>
-          <Reviews />
+           <div className="reviews--container">
+              <Reviews />
+          </div>
         </div>
       </div>
     </div>

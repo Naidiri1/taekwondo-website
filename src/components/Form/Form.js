@@ -36,7 +36,6 @@ const schema = yup.object().shape({
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs.sendForm(serviceEmail, templateID, form.current, publicKey)
     .then((result) => {
         console.log(result.text);
@@ -53,7 +52,7 @@ const schema = yup.object().shape({
         {errors.firstName && <p>{errors.firstName.message}</p>}
         <input type="text" name="lastName" placeholder="Last name" {...register("lastName")} />
         {errors.lastName && <p>{errors.lastName.message}</p>}
-        <select type="choice" name="choice" {...register("choice")}>
+        <select  className="select--class" type="choice" name="choice" {...register("choice")}>
           <option value="">Select...</option>
           <option value="class1">Class 1</option>
           <option value="class1">Class 2</option>

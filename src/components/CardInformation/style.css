@@ -1,4 +1,14 @@
 .modal {
 color:rgb(24, 14, 14) !important;
-background-color: rgb(25, 210, 149);
+background-color: rgb(25, 210, 149, 0);
+}
+
+.class--button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px;
+  max-width: 15rem;
+  margin: auto;
+  margin-top: 15px;
 }
