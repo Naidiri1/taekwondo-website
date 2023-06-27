@@ -42,15 +42,6 @@ const cards = [
     modalImgApp: belt,
   },
   {
-    img: Camps,
-    cardTitle: "Taekwondo Camps",
-    cardDescription: "class starts at 8 am",
-    modalTitle: "class 1",
-    modalContent:
-      "Allows children to feel engaged with our martial arts program by providing strong visual cues to help them align with their achievements and goals.",
-    modalImgApp: belt,
-  },
-  {
     img: belt,
     cardTitle: "Adult program",
     cardDescription: "class starts at 8 am",
