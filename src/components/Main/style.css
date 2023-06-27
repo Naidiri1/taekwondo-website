@@ -120,3 +120,24 @@
 .reviews--container {
   margin-top: 50px;
 }
+.logo--img {
+  width: 400px;
+  background-size: cover;
+  animation: spin 8s linear infinite;
+  transform-style: preserve-3d;
+  transition: 1s;
+
+}
+.logo {
+  display: flex;
+  justify-content: center;
+
+}
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
