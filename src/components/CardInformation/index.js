@@ -50,6 +50,7 @@ const CardInformation = (props) => {
           onHide={handleClose}
           backdrop="static"
           keyboard={false}
+          style={{marginTop: "8rem"}}
         >
           <Modal.Header closeButton>
             <Modal.Title style={{ color: "black" }}>

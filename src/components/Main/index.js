@@ -34,7 +34,8 @@ const style = {
   textAlign: "center",
 };
 const bgGray = {
-  backgroundColor: "#212529",
+  backgroundColor: "#212529"
+
 };
 const Main = () => {
 
