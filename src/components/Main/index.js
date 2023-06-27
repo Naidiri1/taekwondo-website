@@ -17,7 +17,6 @@ import Form from "../Form/Form";
 
 const bgGray = {
   backgroundColor: "#212529"
-
 };
 const Main = () => {
   return (
@@ -36,7 +35,7 @@ const Main = () => {
             />
           </div>
           <div className="d-flex justify-content-center align-items-center text-center">
-            <div>
+            <div style={{fontFamily: "Raleway, sans-serif"}}>
               <h2>HWA RANG TRADITIONAL</h2>
               <h2>TAEKWON-DO</h2>
             </div>
@@ -47,26 +46,9 @@ const Main = () => {
           <div id="about">
             <AboutTaekwondo />
           </div>
-          <div style={{ position: "relative" }}>
-            <img
-              src={belt}
-              alt="logo"
-              style={{
-                marginTop: "5%",
-                height: "170px",
-                width: "100%",
-                objectFit: "cover",
-                filter: "contrast(60%)",
-              }}
-            />
-            <div
-              className="position-absolute top-50 start-50 translate-middle text-center "
-              style={{ background: "none" }}
-            >
-              <h3 style={{ background: "none", fontSize: "50px" }}>CLASSES</h3>
-            </div>
+          <div className="banner--container" id="classes--banner">
+            <h1 className="banner--text">Classes</h1>
           </div>
-
           <div id="courses" className="card--container">
             {cards.map((card, idx) => (
               <CardInformation
@@ -80,73 +62,18 @@ const Main = () => {
               />
             ))}
           </div>
-          <div style={{ position: "relative" }}>
-            <img
-              src={belt}
-              alt="logo"
-              style={{
-                marginTop: "5%",
-                height: "170px",
-                width: "100%",
-                objectFit: "cover",
-                filter: "contrast(60%)",
-              }}
-            />
-            <div
-              className="position-absolute top-50 start-50 translate-middle text-center "
-              style={{ background: "none" }}
-            >
-              <h3 style={{ background: "none", fontSize: "50px" }}>ALBUM</h3>
-            </div>
+          <div className="banner--container" id="album--banner">
+            <h1 className="banner--text">Album</h1>
           </div>
-
           <div id="album" className="album-imgs">
             {Album()}
           </div>
-          <div style={{ position: "relative" }}>
-        <img
-          src={belt}
-          alt="logo"
-          style={{
-            marginTop:"5%",
-            height: "170px",
-            width: "100%",
-            objectFit: "cover",
-            filter: "contrast(60%)",
-          }}
-        />
-        <div
-          className="position-absolute top-50 start-50 translate-middle text-center "
-          style={{ background: "none" }}
-        >
-          <h3 style={{ background: "none", fontSize:"50px" }}>LOCATION</h3>
-          
-        </div>
-        </div>
+          <div className="banner--container" id="location--banner">
+            <h1 className="banner--text">Contact</h1>
+          </div>
           <div className="maps--container">
-           
             <Maps />
           </div>
-          <div style={{ position: "relative" }}>
-        <img
-          src={belt}
-          alt="logo"
-          style={{
-            marginTop:"5%",
-            height: "170px",
-            width: "100%",
-            objectFit: "cover",
-            filter: "contrast(60%)",
-          }}
-        />
-        <div
-          className="position-absolute top-50 start-50 translate-middle text-center "
-          style={{ background: "none" }}
-        >
-          <h3 style={{ background: "none", fontSize:"50px" }}>CONTACT</h3>
-          
-        </div>
-        </div>
           <div className="form--container" id="contact">
             <Form />
             <div className="contact--information--container">
@@ -157,26 +84,9 @@ const Main = () => {
             </div>
           </div>
           <div id="testimonials"> </div>
-          <div style={{ position: "relative" }}>
-        <img
-          src={belt}
-          alt="logo"
-          style={{
-            marginTop:"5%",
-            height: "170px",
-            width: "100%",
-            objectFit: "cover",
-            filter: "contrast(60%)",
-          }}
-        />
-        <div
-          className="position-absolute top-50 start-50 translate-middle text-center "
-          style={{ background: "none" }}
-        >
-          <h3 style={{ background: "none", fontSize:"50px" }}>REVIEWS</h3>
-          
-        </div>
-        </div>
+          <div className="banner--container" id="reviews--banner">
+            <h1 className="banner--text">Reviews</h1>
+          </div>
           <div className="reviews--container">
             <Reviews />
           </div>
