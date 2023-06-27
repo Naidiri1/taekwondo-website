@@ -3,7 +3,6 @@ import kids from "../../assets/imgs/kids.jpg";
 import beginner from "../../assets/imgs/beginner.jpg";
 import advanced from "../../assets/imgs/advanced.jpg";
 import afterSchool from "../../assets/imgs/afterSchool.jpg";
-import Camps from "../../assets/imgs/camps.jpg";
 const cards = [
   {
     img: kids,

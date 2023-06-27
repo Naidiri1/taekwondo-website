@@ -1,19 +1,16 @@
 import "bootstrap/dist/css/bootstrap.css";
 import belt from "../../assets/imgs/belt.jpg";
 import React from "react";
-import CardInformation from "../CardInformation";
 import NavBar from "../NavBar";
 import AboutTaekwondo from "../AboutTaekwondo";
 import "./style.css";
-import cards from "./cards";
-// Import sliderImgs array of objects from sliderImg.js
-
-// import AlbumTemplate from "../Album/albumTemplate";
+import Banner from "../Banner";
 import Album from "../Album/Album";
 import Maps from "../Google/Maps";
 import Reviews from "../Google/Reviews";
 import logo from "../../assets/imgs/croppedLogo.png";
 import Form from "../Form/Form";
+import CardDisplay from "../CardInformation";
 
 const bgGray = {
   backgroundColor: "#212529",
@@ -46,106 +43,18 @@ const Main = () => {
           <div id="about">
             <AboutTaekwondo />
           </div>
-          <div style={{ position: "relative" }}>
-            <img
-              src={belt}
-              alt="logo"
-              style={{
-                marginTop: "5%",
-                height: "170px",
-                width: "100%",
-                objectFit: "cover",
-                filter: "contrast(60%)",
-              }}
-            />
-            <div
-              className="position-absolute top-50 start-50 translate-middle text-center "
-              style={{ background: "none" }}
-            >
-              <h3 style={{ background: "none", fontSize: "50px" }}>CLASSES</h3>
-            </div>
-          </div>
+          <Banner src={belt} heading={"CLASSES"}/>
 
-          <div id="courses" className="card--container">
-            {cards.map((card, idx) => (
-              <CardInformation
-                key={idx}
-                img={card.img}
-                cardTitle={card.cardTitle}
-                cardDescription={card.cardDescription}
-                modalTitle={card.modalTitle}
-                modalContent={card.modalContent}
-                modalImgApp={card.modalImgApp}
-              />
-            ))}
-          </div>
-          <div style={{ position: "relative" }}>
-            <img
-              src={belt}
-              alt="logo"
-              style={{
-                marginTop: "5%",
-                height: "170px",
-                width: "100%",
-                objectFit: "cover",
-                filter: "contrast(60%)",
-              }}
-            />
-            <div
-              className="position-absolute top-50 start-50 translate-middle text-center "
-              style={{ background: "none" }}
-            >
-              <h3 style={{ background: "none", fontSize: "50px" }}>ALBUM</h3>
-            </div>
-          </div>
-
+          <CardDisplay />
+          <Banner src={belt} heading={"ALBUM"}/>
           <div id="album" className="album-imgs">
-            {Album()}
+            <Album />
           </div>
-          <div style={{ position: "relative" }}>
-        <img
-          src={belt}
-          alt="logo"
-          style={{
-            marginTop:"5%",
-            height: "170px",
-            width: "100%",
-            objectFit: "cover",
-            filter: "contrast(60%)",
-          }}
-        />
-        <div
-          className="position-absolute top-50 start-50 translate-middle text-center "
-          style={{ background: "none" }}
-        >
-          <h3 style={{ background: "none", fontSize:"50px" }}>LOCATION</h3>
-          
-        </div>
-        </div>
+          <Banner src={belt} heading={"LOCATION"}/>
           <div className="maps--container">
-           
             <Maps />
           </div>
-          <div style={{ position: "relative" }}>
-        <img
-          src={belt}
-          alt="logo"
-          style={{
-            marginTop:"5%",
-            height: "170px",
-            width: "100%",
-            objectFit: "cover",
-            filter: "contrast(60%)",
-          }}
-        />
-        <div
-          className="position-absolute top-50 start-50 translate-middle text-center "
-          style={{ background: "none" }}
-        >
-          <h3 style={{ background: "none", fontSize:"50px" }}>CONTACT</h3>
-          
-        </div>
-        </div>
+          <Banner src={belt} heading={"CONTACT"}/> 
           <div className="form--container" id="contact">
             <Form />
             <div className="contact--information--container">
@@ -156,26 +65,7 @@ const Main = () => {
             </div>
           </div>
           <div id="testimonials"> </div>
-          <div style={{ position: "relative" }}>
-        <img
-          src={belt}
-          alt="logo"
-          style={{
-            marginTop:"5%",
-            height: "170px",
-            width: "100%",
-            objectFit: "cover",
-            filter: "contrast(60%)",
-          }}
-        />
-        <div
-          className="position-absolute top-50 start-50 translate-middle text-center "
-          style={{ background: "none" }}
-        >
-          <h3 style={{ background: "none", fontSize:"50px" }}>REVIEWS</h3>
-          
-        </div>
-        </div>
+          <Banner src={belt} heading={"REVIEWS"}/>
           <div className="reviews--container">
             <Reviews />
           </div>

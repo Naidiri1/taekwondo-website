@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { Card, CardImg, Button, Modal } from "react-bootstrap";
-import "./style.css"
+import "./style.css";
+import cards from "./cards";
 const CardInformation = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div style={{
-      display: "flex",
-      flexDirection: "row",
-      flexWrap: "wrap",
-    }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+      }}
+    >
       <div
         style={{
           display: "flex",
@@ -22,27 +25,30 @@ const CardInformation = (props) => {
           maxWidth: "400px",
           minHeight: "550px",
           textAlign: "center",
-          border: "1px solid rgb(171, 171, 171)"
+          border: "1px solid rgb(171, 171, 171)",
         }}
       >
-        <CardImg src={props.img} style={{ 
-          minWidth: "300px", 
-          width: "100%", 
-          maxWidth: "400px",
-          minHeight: "400",
-          height: "100%",
-          maxHeight: "600px"}} 
+        <CardImg
+          src={props.img}
+          style={{
+            minWidth: "300px",
+            width: "100%",
+            maxWidth: "400px",
+            minHeight: "400",
+            height: "100%",
+            maxHeight: "600px",
+          }}
         />
-        <Card.Title style={{margin: "20px"}}>{props.cardTitle}</Card.Title>
-        <div style={{borderBottom: "1px solid white"}}></div>
+        <Card.Title style={{ margin: "20px" }}>{props.cardTitle}</Card.Title>
+        <div style={{ borderBottom: "1px solid white" }}></div>
         <Card.Body>
           <Card.Text style={{ margin: "10px", textAlign: "justify" }}>
             <div className="card--description">{props.cardDescription}</div>
           </Card.Text>
         </Card.Body>
         <Button className="class--button" onClick={() => handleShow()}>
-        More about this class
-      </Button>
+          More about this class
+        </Button>
       </div>
       <div className="modal">
         <Modal
@@ -76,4 +82,22 @@ const CardInformation = (props) => {
   );
 };
 
-export default CardInformation;
+const CardDisplay = () => {
+  return (
+    <div id="courses" className="card--container">
+      {cards.map((card, idx) => (
+        <CardInformation
+          key={idx}
+          img={card.img}
+          cardTitle={card.cardTitle}
+          cardDescription={card.cardDescription}
+          modalTitle={card.modalTitle}
+          modalContent={card.modalContent}
+          modalImgApp={card.modalImgApp}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default CardDisplay;
