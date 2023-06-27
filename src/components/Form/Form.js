@@ -6,13 +6,6 @@ import emailjs from '@emailjs/browser';
 import "./style.css";
 import { serviceEmail, templateID, publicKey } from './config';
 
-
-// console.log('API Key:', serviceEmail);
-
-// console.log('template:', templateID);
-
-// console.log('publickey:', publicKey);
-
 const schema = yup.object().shape({
   firstName: yup.string().required('First name is required'),
   lastName: yup.string().required('Last name is required'),
