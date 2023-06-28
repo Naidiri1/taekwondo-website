@@ -4,17 +4,17 @@ const member = [
   {
     img:teamOne,
     cardTitle: "person 1",
-    cardDescription: "class starts at 8 am",
+    cardDescription: "Description of person 1",
   },
   {
     img:teamOne,
     cardTitle: "person 2",
-    cardDescription: "class starts at 8 am",
+    cardDescription: "Description of person 2",
   },
   {
     img:teamOne,
     cardTitle: "person 3",
-    cardDescription: "class starts at 8 am",
+    cardDescription: "Description of person 3",
   },
 ];
 
