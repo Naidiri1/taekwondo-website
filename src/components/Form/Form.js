@@ -37,7 +37,7 @@ const schema = yup.object().shape({
     e.preventDefault();
     emailjs.sendForm(serviceEmail, templateID, form.current, publicKey)
     .then((result) => {
-      setSuccessMessage("Thank you, you earnt 2 FREE classes!");
+      setSuccessMessage("Thank you, you earned 2 FREE classes!");
         console.log(result.text);
     }, (error) => {
         console.log(error.text);

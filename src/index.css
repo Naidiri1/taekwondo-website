@@ -14,7 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body, html {overflow-x: hidden !important;}
+body, html {overflow-x: hidden !important; }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

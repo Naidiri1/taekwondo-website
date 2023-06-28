@@ -1,23 +1,10 @@
 import React, { useState } from 'react';
 import "./style.css"
-import img1 from "../../assets/imgs/img1.jpg"
-import img2 from "../../assets/imgs/img2.jpg"
-import img4 from "../../assets/imgs/img4.jpg"
-import img5 from "../../assets/imgs/img5.jpg"
-import img6 from "../../assets/imgs/img6.jpg"
-import img7 from "../../assets/imgs/img7.jpg"
-import img8 from "../../assets/imgs/img8.jpg"
-import img9 from "../../assets/imgs/img9.jpg"
-import img10 from "../../assets/imgs/img10.jpg"
-import img11 from "../../assets/imgs/img11.jpg"
-import img12 from "../../assets/imgs/img12.jpg"
-import img13 from "../../assets/imgs/img13.jpg"
-import img14 from "../../assets/imgs/img14.jpg"
-import img15 from "../../assets/imgs/img15.jpg"
-import img16 from "../../assets/imgs/img16.jpg"
-import img17 from "../../assets/imgs/img17.jpg"
-import img18 from "../../assets/imgs/img18.jpg"
-import img19 from "../../assets/imgs/img19.jpg"
+import { 
+  img1, img2, img4, img5,
+  img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15,
+  img16, img17, img18, img19 } from "../../assets/imgs/albumPhotos"
 
 const Album = () => {
   const [displayedImages, setDisplayedImages] = useState(3); // Initial number of displayed images
@@ -50,7 +37,7 @@ const Album = () => {
   };
 
   return (
-    <div>
+    <div className="album-imgs">
       <div className="album-container">
         <div className="album-content">
           <div className="album-imgs">
@@ -58,7 +45,7 @@ const Album = () => {
               <AlbumTemplate key={idx} img={img.imgSrc} alt={img.alt} />
             ))}
           </div>
-          <div className="images--button">
+          <div>
             {displayedImages < album.length && (
               <button className='album--btn' onClick={handleLoadMore}>
                 Load more images

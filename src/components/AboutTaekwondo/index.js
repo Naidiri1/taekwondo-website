@@ -1,5 +1,5 @@
 import React from 'react';
-import belt from '../../assets/imgs/belt.jpg';
+import belt from '../../assets/imgs/allPhotos/belt.jpg';
 
 const AboutTaekwondo = () => {
     return (
@@ -12,6 +12,7 @@ const AboutTaekwondo = () => {
             width: "100%",
             objectFit: "cover",
             filter: "contrast(60%)",
+            marginTop: "6rem"
           }}
         />
         <div

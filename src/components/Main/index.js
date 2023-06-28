@@ -1,27 +1,30 @@
 import "bootstrap/dist/css/bootstrap.css";
-import belt from "../../assets/imgs/belt.jpg";
+import belt from "../../assets/imgs/allPhotos/belt.jpg";
 import React from "react";
-import banner1 from "../../assets/imgs/banner1.jpeg"
-import banner2 from "../../assets/imgs/banner2.png"
-import banner4 from "../../assets/imgs/banner4.jpeg"
-import banner5 from "../../assets/imgs/banner5.jpeg"
-import CardInformation from "../CardInformation";
+import CardDisplay from "../CardInformation";
 import NavBar from "../NavBar";
 import AboutTaekwondo from "../AboutTaekwondo";
 import "./style.css";
-import cards from "./cards";
 import TeamDisplay from "../Team/Team"
 import Album from "../Album/Album";
 import Maps from "../Google/Maps";
 import Reviews from "../Google/Reviews";
-import logo from "../../assets/imgs/croppedLogo.png";
+import logo from "../../assets/imgs/allPhotos/croppedLogo.png";
 import Form from "../Form/Form";
-
+import Banner from "../Banner/index"
+import {
+  banner1, 
+  banner2,
+  banner3, 
+  banner4, 
+  banner5,
+  banner6 } from "../../assets/imgs/bannerPhotos"
 
 const bgGray = {
   backgroundColor: "#212529"
 };
 const Main = () => {
+
   return (
     <div>
       <div>
@@ -46,73 +49,26 @@ const Main = () => {
           <div className="logo">
             <img className="logo--img" src={logo} alt="logo" />
           </div>
-          <div id="about">
-            <AboutTaekwondo />
+          <div id="about" style={{paddingTop: "2rem", marginTop: "-2rem"}}>
+            <Banner bannerPhoto={banner6} bannerText="About"/>
           </div>
-
-          <div style={{ position: "relative" }} id="courses">
-            <img
-              src={banner1}
-              alt="logo"
-              style={{
-                marginTop: "5%",
-                height: "170px",
-                width: "100%",
-                objectFit: "cover",
-                filter: 'grayscale(100%)'
-              }}
-            />
-              <div className="banner--text">CLASSES</div>
+          <AboutTaekwondo />
+          <div id="classes" style={{paddingTop: "2rem", marginTop: "-2rem"}}>
+            <Banner bannerPhoto={banner1} bannerText="Classes"/>
           </div>
-
-          <div className="card--container">
-            {cards.map((card, idx) => (
-              <CardInformation
-                key={idx}
-                img={card.img}
-                cardTitle={card.cardTitle}
-                cardDescription={card.cardDescription}
-                modalTitle={card.modalTitle}
-                modalContent={card.modalContent}
-                modalImgApp={card.modalImgApp}
-              />
-            ))}
+          <CardDisplay />
+          <div id="team" style={{paddingTop: "2rem", marginTop: "-2rem"}}>
+            <Banner bannerPhoto={banner3} bannerText="Team"/> 
           </div>
           <div>
           <TeamDisplay/>
           </div>
-          <div style={{ position: "relative" }} id="album">
-
-            <img
-              src={banner2}
-              alt="logo"
-              style={{
-                marginTop: "5%",
-                height: "170px",
-                width: "100%",
-                objectFit: "cover",
-                filter: 'grayscale(100%)'
-              }}
-            />
-              <div className="banner--text">ALBUM</div>
+          <div id="album" style={{paddingTop: "2rem", marginTop: "-2rem"}}>
+            <Banner bannerPhoto={banner2} bannerText="Album" /> 
           </div>
-
-          <div id="album" className="album-imgs">
-            {Album()}
-          </div>
-          <div style={{ position: "relative" }} id="contact">
-            <img
-              src={banner4}
-              alt="logo"
-              style={{
-                marginTop: "5%",
-                height: "170px",
-                width: "100%",
-                objectFit: "cover",
-                filter: 'grayscale(100%)'
-              }}
-            />
-              <div className="banner--text" id="contact">CONTACT</div>
+          <Album />
+          <div id="contact" style={{paddingTop: "2rem", marginTop: "-2rem"}}>
+            <Banner bannerPhoto={banner4} bannerText="Contact" id="contact"/> 
           </div>
           <div className="form--container">
             <Form />
@@ -126,23 +82,11 @@ const Main = () => {
           <div className="maps--container">
             <Maps />
           </div>
-          <div id="testimonials"> </div>
-          <div style={{ position: "relative" }} id="testimonials">
-            <img
-              src={banner5}
-              alt="logo"
-              style={{
-                marginTop: "5%",
-                height: "170px",
-                width: "100%",
-                objectFit: "cover",
-                filter: 'grayscale(100%)'
-              }}
-            />
-              <div className="banner--text" >REVIEWS</div>
+          <div id="testimonials" style={{paddingTop: "2rem", marginTop: "-2rem"}}>
+            <Banner bannerPhoto={banner5} bannerText="Reviews" /> 
           </div>
           <div className="reviews--container">
-            <Reviews />
+          <Reviews />
           </div>
         </div>
       </div>

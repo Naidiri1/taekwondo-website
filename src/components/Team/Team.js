@@ -1,44 +1,19 @@
 import React from "react";
+import "./style.css"
 import { Card, CardImg } from "react-bootstrap";
 import members from "./members"
 const Team = (props) =>{
 return(
 
-    <div style={{
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-      }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            padding: "25px",
-            margin: "40px",
-            minWidth: "300px",
-            width: "100%",
-            maxWidth: "400px",
-            minHeight: "550px",
-            textAlign: "center",
-            border: "1px solid rgb(171, 171, 171)"
-          }}
-        >
-          <CardImg src={props.img} style={{ 
-            minWidth: "300px", 
-            width: "100%", 
-            maxWidth: "400px",
-            minHeight: "400",
-            height: "100%",
-            maxHeight: "600px"}} 
-          />
+    <div className="team--container">
+        <div className="team-cards--flexchild">
+          <CardImg src={props.img}  className="team--images" />
           <Card.Title style={{margin: "20px"}}>{props.cardTitle}</Card.Title>
-          <div style={{borderBottom: "1px solid white"}}></div>
           <Card.Body>
             <Card.Text style={{ margin: "10px", textAlign: "justify" }}>
               <div className="card--description">{props.cardDescription}</div>
             </Card.Text>
           </Card.Body>
-          
         </div>
       </div>
 
@@ -51,7 +26,7 @@ const TeamDisplay = () => {
             flexDirection: "row",
             flexWrap: "wrap",
             justifyContent:"center"
-          }} className="team-container">
+          }} >
         {members.map((member, idx) => (
           <Team
             key={idx}

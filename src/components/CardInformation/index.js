@@ -1,40 +1,18 @@
 import React, { useState } from "react";
 import { Card, CardImg, Button, Modal } from "react-bootstrap";
 import "./style.css"
+import cards from "./cards";
+
 const CardInformation = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div style={{
-      display: "flex",
-      flexDirection: "row",
-      flexWrap: "wrap",
-      
-    }}>
+    <div>
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          padding: "25px",
-          margin: "40px",
-          minWidth: "300px",
-          width: "100%",
-          maxWidth: "400px",
-          minHeight: "550px",
-          maxHeight: "550px",
-          textAlign: "center",
-          border: "1px solid rgb(171, 171, 171)"
-        }}
+      className="cards--flexchild"
       >
-        <CardImg src={props.img} style={{ 
-          minWidth: "300px", 
-          width: "100%", 
-          maxWidth: "400px",
-          minHeight: "400",
-          height: "100%",
-          maxHeight: "600px"}} 
-        />
+        <CardImg src={props.img} className="class--image"/>
         <Card.Title style={{margin: "20px"}}>{props.cardTitle}</Card.Title>
         <div style={{borderBottom: "1px solid white"}}></div>
         <Card.Body>
@@ -50,7 +28,7 @@ const CardInformation = (props) => {
         <Modal
           show={show}
           onHide={handleClose}
-          backdrop="static"
+          backdrop={true}
           keyboard={false}
           style={{marginTop: "8rem"}}
         >
@@ -79,4 +57,22 @@ const CardInformation = (props) => {
   );
 };
 
-export default CardInformation;
+const CardDisplay = () => {
+  return (
+    <div className="card--container">
+      {cards.map((card, idx) => (
+        <CardInformation
+          key={idx}
+          img={card.img}
+          cardTitle={card.cardTitle}
+          cardDescription={card.cardDescription}
+          modalTitle={card.modalTitle}
+          modalContent={card.modalContent}
+          modalImgApp={card.modalImgApp}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default CardDisplay;

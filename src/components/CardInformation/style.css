@@ -3,6 +3,22 @@ color:rgb(24, 14, 14) !important;
 background-color: rgb(25, 210, 149, 0);
 }
 
+body.modal-open {
+  overflow-y: scroll;
+  padding-right: 0 !important;
+}
+
+.card--description {
+  text-align: center;
+}
+
+.card--container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .class--button {
   background-color: white;
   color: black;
@@ -11,4 +27,27 @@ background-color: rgb(25, 210, 149, 0);
   max-width: 15rem;
   margin: auto;
   margin-top: 15px;
+}
+
+.cards--flexchild {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin: 40px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 400px;
+  min-height: 550px;
+  max-height: 650px;
+  text-align: center;
+  border: 1px solid rgb(171, 171, 171);
+}
+
+.class--image {
+  min-width: 350px;
+  width: 100%;
+  max-width: 350px;
+  min-height: 300px;
+  height: 100%;
+  max-height: 300px;
 }
