@@ -16,7 +16,7 @@ const Banner = (props) => {
       src={bannerPhoto}
       alt="logo"
       style={{
-        marginTop: "5%",
+        marginTop: "4rem",
         height: "170px",
         width: "100%",
         objectFit: "cover",
