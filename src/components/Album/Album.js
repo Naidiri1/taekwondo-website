@@ -1,20 +1,32 @@
 import React, { useState } from 'react';
-import imgOne from "../../assets/imgs/imgOne.jpg"
-import imgTwo from "../../assets/imgs/imgTwo.jpg"
-import imgThree from "../../assets/imgs/imgThree.jpg"
-import imgFour from "../../assets/imgs/imgFour.jpg"
-import imgFive from "../../assets/imgs/imgFive.jpg"
-import imgSix from "../../assets/imgs/imgSix.jpg"
+import "./style.css"
+import { 
+  img1, img2, img4, img5,
+  img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15,
+  img16, img17, img18, img19 } from "../../assets/imgs/albumPhotos"
 
 const Album = () => {
   const [displayedImages, setDisplayedImages] = useState(3); // Initial number of displayed images
   const album = [
-    { imgSrc: imgOne, alt: 'Image 1' },
-    { imgSrc: imgTwo, alt: 'Image 1' },
-    { imgSrc: imgThree, alt: 'Image 1' },
-    { imgSrc: imgFour, alt: 'Image 1' },
-    { imgSrc: imgFive, alt: 'Image 1' },
-    { imgSrc: imgSix, alt: 'Image 1' },
+    { imgSrc: img1, alt: 'Image 1' },
+    { imgSrc: img2, alt: 'Image 1' },
+    { imgSrc: img4, alt: 'Image 1' },
+    { imgSrc: img5, alt: 'Image 1' },
+    { imgSrc: img6, alt: 'Image 1' },
+    { imgSrc: img7, alt: 'Image 1' },
+    { imgSrc: img8, alt: 'Image 1' },
+    { imgSrc: img9, alt: 'Image 1' },
+    { imgSrc: img10, alt: 'Image 1' },
+    { imgSrc: img11, alt: 'Image 1' },
+    { imgSrc: img12, alt: 'Image 1' },
+    { imgSrc: img13, alt: 'Image 1' },
+    { imgSrc: img14, alt: 'Image 1' },
+    { imgSrc: img15, alt: 'Image 1' },
+    { imgSrc: img16, alt: 'Image 1' },
+    { imgSrc: img17, alt: 'Image 1' },
+    { imgSrc: img18, alt: 'Image 1' },
+    { imgSrc: img19, alt: 'Image 1' }
   
     // Add more images here
   ];
@@ -25,7 +37,7 @@ const Album = () => {
   };
 
   return (
-    <div>
+    <div className="album-imgs">
       <div className="album-container">
         <div className="album-content">
           <div className="album-imgs">
@@ -33,9 +45,9 @@ const Album = () => {
               <AlbumTemplate key={idx} img={img.imgSrc} alt={img.alt} />
             ))}
           </div>
-          <div className="images--button">
+          <div>
             {displayedImages < album.length && (
-              <button style={{ color: 'black' }} onClick={handleLoadMore}>
+              <button className='album--btn' onClick={handleLoadMore}>
                 Load more images
               </button>
             )}
@@ -49,7 +61,7 @@ const Album = () => {
 const AlbumTemplate = ({ img, alt }) => {
   return (
     <div className="mt-5  d-flex flex-wrap justify-content-center align-items-center" >
-  <img src={img} alt={alt} style={{height:"300px", width:"300px", padding:"10px", objectFit:"fill"}}/>
+  <img src={img} alt={alt} style={{height:"350px", width:"400px", padding:"10px", objectFit:"fill"}}/>
   </div>
   );
 };

@@ -1,3 +1,9 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+/*
+font-family: 'Raleway', sans-serif;
+*/
+
 body {
  
   margin: 0;
@@ -8,7 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body, html {overflow-x: hidden !important;}
+body, html {overflow-x: hidden !important; }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

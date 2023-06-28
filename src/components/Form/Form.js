@@ -1,13 +1,11 @@
-import   { useRef } from "react";
+import   { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import emailjs from '@emailjs/browser';
 import "./style.css";
 import { serviceEmail, templateID, publicKey } from './config';
-// const serviceEmail = process.env.serviceEmail;
-// const templateID = process.env.templateID;
-// const publicKey = process.env.publicKey;
+
 
 // console.log('API Key:', serviceEmail);
 
@@ -29,6 +27,7 @@ const schema = yup.object().shape({
 
  function Form() {
   const form = useRef();
+  const [successMessage, setSuccessMessage] = useState(""); // State variable for success message
 
   const { register, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
@@ -38,9 +37,11 @@ const schema = yup.object().shape({
     e.preventDefault();
     emailjs.sendForm(serviceEmail, templateID, form.current, publicKey)
     .then((result) => {
+      setSuccessMessage("Thank you, you earned 2 FREE classes!");
         console.log(result.text);
     }, (error) => {
         console.log(error.text);
+       
     });
 
   };
@@ -69,6 +70,7 @@ const schema = yup.object().shape({
         {errors.message && <p>{errors.message.message}</p>}
         <input id="submit" type="submit" value="Submit" />
       </form>
+      {successMessage && <p>{successMessage}</p>} 
     </div>
   );
 };

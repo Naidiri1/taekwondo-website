@@ -1,57 +1,3 @@
-.text--overlay {
-  transform: translate(0, -400%);
-}
-
-.card--container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-
-.card--description {
-  text-align: center;
-}
-
-.button {
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(33, 75, 45, 0.2),
-    0 6px 20px 0 rgba(222, 241, 221, 0.19);
-  width: 250px;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.button:hover {
-  background-color: #73c95d;
-}
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-  color: black !important;
-}
-
-.button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
 .main-img {
   max-height: 500px;
   margin-top: 40px;
@@ -60,21 +6,26 @@
   object-fit: cover;
 }
 
-.album-imgs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-  width: 100%;
+.logo--img {
+  width: 400px;
+  background-size: cover;
+  animation: spin 8s linear infinite;
+  transform-style: preserve-3d;
+  transition: 1s;
+
 }
-.images--button {
-  align-items: center;
-  justify-content: center;
+.logo {
   display: flex;
-  align-content: center;
-  text-align: center;
-  padding: 10px;
+  justify-content: center;
+
+}
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .maps--container {
@@ -82,8 +33,6 @@
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .form--container {
   display: flex;

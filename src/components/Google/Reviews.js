@@ -12,7 +12,7 @@ const Reviews = () => {
 
   return (
     <div className='reviews--container'>
-      <h1 style={{textAlign: "center"}}>Reviews</h1>
+
       <ElfsightWidget class="elfsight-app-9fd2d85c-3648-4136-809e-1d68535f49ae"/>
     </div>
   )
