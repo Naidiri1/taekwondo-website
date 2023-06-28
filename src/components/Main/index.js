@@ -6,14 +6,13 @@ import NavBar from "../NavBar";
 import AboutTaekwondo from "../AboutTaekwondo";
 import "./style.css";
 import cards from "./cards";
-// Import sliderImgs array of objects from sliderImg.js
-
-// import AlbumTemplate from "../Album/albumTemplate";
+import TeamDisplay from "../Team/Team"
 import Album from "../Album/Album";
 import Maps from "../Google/Maps";
 import Reviews from "../Google/Reviews";
 import logo from "../../assets/imgs/croppedLogo.png";
 import Form from "../Form/Form";
+
 
 const bgGray = {
   backgroundColor: "#212529",
@@ -79,6 +78,7 @@ const Main = () => {
               />
             ))}
           </div>
+          <TeamDisplay/>
           <div style={{ position: "relative" }}>
             <img
               src={belt}
