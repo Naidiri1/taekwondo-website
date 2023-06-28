@@ -16,7 +16,7 @@ const NavBar = () => {
           href="https://www.google.com/maps/place/Hwa+Rang+Traditional+TaeKwon-Do+Center,+4520+FL-64,+Bradenton,+FL+34208/@27.4965506,-82.5054414,17z/data=!4m9!1m2!2m1!1staekwondo+near+Bradenton,+FL!3m5!1s0x88c33cf2f6f408bb:0x4c5d649f8601b722!8m2!3d27.4965506!4d-82.5054414!16s%2Fg%2F1ptwq4k9z?source=g.page.m.ad._"
         >
           <FontAwesomeIcon icon={faLocationDot} />
-          4520FL-64, Bradenton, FL 34208
+          4520 FL-64, Bradenton, FL 34208
         </a>
       </div>
       <Navbar

@@ -1,7 +1,8 @@
 import belt from "../../assets/imgs/belt.jpg";
-import kids from "../../assets/imgs/kids.jpg";
+import adult from "../../assets/imgs/img17.jpg"
+import kids from "../../assets/imgs/img8.jpg";
 import beginner from "../../assets/imgs/beginner.jpg";
-import advanced from "../../assets/imgs/advanced.jpg";
+import advanced from "../../assets/imgs/img7.jpg";
 import afterSchool from "../../assets/imgs/afterSchool.jpg";
 import Camps from "../../assets/imgs/camps.jpg";
 const cards = [
@@ -42,7 +43,7 @@ const cards = [
     modalImgApp: belt,
   },
   {
-    img: belt,
+    img: adult,
     cardTitle: "Adult program",
     cardDescription: "class starts at 8 am",
     modalTitle: "class 1",
