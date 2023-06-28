@@ -10,6 +10,7 @@ const CardInformation = (props) => {
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
+      
     }}>
       <div
         style={{
@@ -21,6 +22,7 @@ const CardInformation = (props) => {
           width: "100%",
           maxWidth: "400px",
           minHeight: "550px",
+          maxHeight: "550px",
           textAlign: "center",
           border: "1px solid rgb(171, 171, 171)"
         }}
@@ -37,7 +39,7 @@ const CardInformation = (props) => {
         <div style={{borderBottom: "1px solid white"}}></div>
         <Card.Body>
           <Card.Text style={{ margin: "10px", textAlign: "justify" }}>
-            <div className="card--description">{props.cardDescription}</div>
+            <div className="card--description" style={{fontFamily: "Raleway, sans-serif", fontWeight: "200"}}>{props.cardDescription}</div>
           </Card.Text>
         </Card.Body>
         <Button className="class--button" onClick={() => handleShow()}>
