@@ -1,4 +1,3 @@
-import belt from "../../assets/imgs/belt.jpg";
 import teamOne from "../../assets/imgs/teamOne.jpg";
 const member = [
   {

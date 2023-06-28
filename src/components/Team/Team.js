@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardImg } from "react-bootstrap";
-import belt from "../../assets/imgs/belt.jpg"
 import members from "./members"
 const Team = (props) =>{
 return(

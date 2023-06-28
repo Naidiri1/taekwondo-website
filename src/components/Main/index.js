@@ -78,7 +78,9 @@ const Main = () => {
               />
             ))}
           </div>
+          <div>
           <TeamDisplay/>
+          </div>
           <div style={{ position: "relative" }}>
             <img
               src={belt}
